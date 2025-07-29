@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="icon" href="https://i.ibb.co/JwpV7g6B/code-4997543.png" type="image/jpeg">
+   <link rel="shortcut icon" href="https://i.ibb.co/JwpV7g6B/code-4997543.png" type="image/jpeg">
+   <title>Home</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <!--=============== NAVBAR ===============-->
+   <nav class="nav">
+      <ul class="nav__list">
+         <li><a href="#home" class="nav__link active-link"><i class="ri-home-smile-2-line"></i></a></li>
+         <li><a href="#projects" class="nav__link"><i class="ri-briefcase-line"></i></a></li>
+         <li>
+            <button class="nav__expand" id="nav-expand">
+               <i class="ri-add-line nav__expand-icon" id="nav-expand-icon"></i>
+            </button>
+            <ul class="nav__expand-list" id="nav-expand-list">
+               <li><a href="#" class="nav__expand-link" data-url="https://mpgamescr.netlify.app"><i class="ri-gamepad-line"></i><span>Games</span></a></li>
+               <li><a href="#" class="nav__expand-link" data-url="https://procr.netlify.app/edufloow"><i class="ri-book-line"></i><span>EduFloow</span></a></li>
+               <li><a href="#" class="nav__expand-link" data-url="https://procrblog.blogspot.com"><i class="ri-article-line"></i><span>Blogs</span></a></li>
+            </ul>
+         </li>
+         <li><a href="#contact" class="nav__link"><i class="ri-send-plane-line"></i></a></li>
+         <li><a href="#settings" class="nav__link"><i class="ri-settings-3-line"></i></a></li>
+      </ul>
+   </nav>
 
+   <!--=============== IFRAME CONTAINER ===============-->
+   <div class="iframe-container" id="iframe-container">
+      <div class="iframe-header">
+         <div class="iframe-title" id="iframe-title">Loading...</div>
+         <button class="iframe-close" id="iframe-close"><i class="ri-close-line"></i></button>
+      </div>
+      <iframe class="iframe-content" id="iframe-content" frameborder="0"></iframe>
+   </div>
+
+   <!--==================== MAIN ====================-->
+   <main class="container">
+      <section class="section active" id="home">
+         <h1>HOME</h1>
+         <div class="stories-container"></div>
+         <div class="story-full">
+           <div class="content">
+             <div class="close-btn"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></div>
+             <div class="left-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg></div>
+             <img src="" alt="Story Image">
+             <div class="right-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg></div>
+             <div class="title">Story Title</div>
+             <a href="#" class="learn-more-btn" target="_blank">Learn More</a>
+           </div>
+         </div>
+         <div class="instagram-posts-container" id="instagram-posts"><div class="loading-posts">Loading posts...</div></div>
+      </section>
+
+      <section class="section" id="projects">
+         <h1>PROJECTS</h1>
+         <div class="projects-container">
+            <div class="header-container">
+               <div class="search-container">
+                  <i class="fas fa-search search-icon"></i>
+                  <input type="search" id="projectSearchBar" placeholder="Search projects by name..." aria-label="Search projects">
+               </div>
+            </div>
+            <div id="projectGrid"></div>
+            <div id="projectMessage"><div class="loading-spinner"></div><p>Loading projects...</p></div>
+         </div>
+      </section>
+
+      <section class="section" id="contact">
+         <h1>CONTACT</h1>
+         <div class="contact-container">
+            <form id="contact-form">
+               <div class="form-group"><label for="name">Your Name:</label><input type="text" id="name" name="name" required></div>
+               <div class="form-group"><label for="email">Your Email:</label><input type="email" id="email" name="email" required></div>
+               <div class="form-group"><label for="subject">Subject:</label><input type="text" id="subject" name="subject" required></div>
+               <div class="form-group"><label for="message">Message:</label><textarea id="message" name="message" required></textarea></div>
+               <button type="submit">Send Message</button>
+               <div id="form-status"></div>
+            </form>
+         </div>
+      </section>
+
+      <section class="section" id="settings">
+         <h1>SETTINGS</h1>
+         <div class="settings-container">
+            <div class="setting-item">
+               <span class="setting-label">Dark Mode</span>
+               <label class="theme-switch">
+                  <input type="checkbox" id="theme-switch-toggle">
+                  <span class="slider"></span>
+               </label>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <script src="script.js"></script>
+</body>
+</html>
